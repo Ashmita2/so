@@ -1,5 +1,5 @@
 #include <stdio.h>
-void main()
+int main()
 {
     int parr[20],np,nb,bloc,temp,max=0,alloc[20];
     np=4;
@@ -7,6 +7,8 @@ void main()
     int b[]={100, 500, 200, 300, 600};
     int p[]={212, 417, 112, 426};
    
+for(int i=0;i<nb;i++){
+alloc[i]=0;}
     /*printf("enter np:");
     scanf("%d",&np);
     printf("enter nb:");
@@ -55,4 +57,3 @@ void main()
   
     
 }
-
