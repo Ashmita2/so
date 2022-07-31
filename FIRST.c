@@ -6,6 +6,8 @@ void main()
     nb=5;
     int p[]={90,50,30,40};
     int b[]={20,100,40,200,10};
+    for(int i=0;i<nb;i++){
+alloc[i]=0;}
     /*printf("enter np:");
     scanf("%d",&np);
     printf("enter nb:");
@@ -52,4 +54,5 @@ void main()
     }
     
 }
+
 
