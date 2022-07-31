@@ -1,23 +1,21 @@
-#include <stdio.h>
-#include <sys/types.h>
-#include <unistd.h>
-#include <stdlib.h>
-
-void main()
+#include<stdio.h>
+#include<unistd.h>
+#include<sys/types.h>
+int main()
 {
-    int pid = fork();
-    if(pid > 0)
-        {
-            printf("In parent process: %d\n", getpid());
-            sleep(3);
-        }
-    else if(pid == 0)
-        {
-            printf("In child process: %d\n", getpid());
-            printf("In parent process: %d\n", getppid());
-            sleep(3);
-            printf("In child process: %d\n", getpid());
-            printf("In parent process: %d\n", getppid());
-        }
-        
-}
+pid_t p;
+p=fork();
+if(p==0)
+     {
+         sleep(5); //child goes to sleep and in the mean time parent terminates
+         printf("I am child having PID %d\n",getpid());
+         printf("My parent PID is %d\n",getppid());
+     }
+     else
+     {
+         printf("I am parent having PID %d\n",getpid());
+         printf("My child PID is %d\n",p);
+     }
+ }
+
+
