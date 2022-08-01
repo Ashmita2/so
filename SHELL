@@ -1,6 +1,6 @@
  
+n=${#str}
 
-Shell Scripts 
 
 (i) Finding whether the given number is an Armstrong number 
 
