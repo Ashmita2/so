@@ -1,0 +1,204 @@
+ 
+
+Shell Scripts 
+
+(i) Finding whether the given number is an Armstrong number 
+
+Code: 
+
+echo "Program to Find Armstrong Number" 
+
+echo "Enter the number:" 
+
+read n 
+
+function ams 
+
+{ 
+
+t=$n 
+
+s=0 
+
+b=0 
+
+c=10 
+
+while [ $n -gt $b ] 
+
+do 
+
+r=$((n % c)) 
+
+i=$((r * r * r)) 
+
+s=$((s + i)) 
+
+n=$((n / c)) 
+
+done 
+
+echo "The sum is:"$s 
+
+if [ $s == $t ] 
+
+then 
+
+echo "Amstrong number" 
+
+else 
+
+echo "Not an Armstrong number" 
+
+fi 
+
+} 
+
+result=`ams $n` 
+
+echo "$result" 
+
+ 
+
+(ii) To print the Fibonacci series 
+
+Code: 
+
+echo "Program to Find Fibonacci Series" 
+
+  echo "How many number of terms to be generated ?" 
+
+  read n 
+
+  x=0 
+
+  y=1 
+
+  i=2 
+
+  echo "Fibonacci Series up to $n terms :" 
+
+  echo "$x" 
+
+  echo "$y" 
+
+  while [ $i -lt $n ] 
+
+  do 
+
+      i=`expr $i + 1 ` 
+
+      z=`expr $x + $y ` 
+
+      echo "$z" 
+
+      x=$y 
+
+      y=$z 
+
+done 
+
+ (iii) To find the largest of n numbers 
+
+              Code: 
+
+                  echo "Program to Find Largest Number:" 
+
+echo "Enter Size:" 
+
+read N 
+
+ 
+
+i=1 
+
+max=0 
+
+ 
+
+echo "Enter Numbers" 
+
+while [ $i -le $N ] 
+
+do 
+
+  read num 
+
+  if [ $i -eq 1 ]  #set first number as max 
+
+  then 
+
+      max=$num 
+
+  else             #from number 2 update max if the num > max. 
+
+      if [ $num -gt $max ] 
+
+      then 
+
+        max=$num 
+
+      fi 
+
+  fi 
+
+  i=$((i + 1))  #increment i by 1 
+
+done 
+
+echo "The Largest Number is" $max 
+
+ 
+
+ (iv) To compare 2 strings 
+
+                 Code: 
+
+                  echo "Program to Compare 2 Strings:" 
+
+read -p "Enter string 1: " str1  
+
+read -p "Enter string 2: " str2 
+
+ 
+
+if [ $str1 == $str2 ] 
+
+then 
+
+    echo "Equal" 
+
+else 
+
+    echo "Un Equal" 
+
+fi 
+
+ 
+
+               (v)  To do string search 
+
+                Code: 
+
+                #! /bin/sh 
+
+       echo "Type a string:"; 
+
+       read a; 
+
+       if [ `echo $a | grep -c "ABCD" ` -gt 0 ] 
+
+       then 
+
+      echo "Success found ABCD in string" 
+
+      else 
+
+      echo "Failed.String does not contain ABCD."; 
+
+      fi 
+
+ 
+
+ 
+
